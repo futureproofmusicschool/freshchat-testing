@@ -5,10 +5,20 @@
 </head>
 <body>
     <h1>Freshchat Widget Test</h1>
-    <script
-        src='//fw-cdn.com/12275722/4732003.js'
-        chat='true'
-        widgetId='41205984-b8aa-49b1-9238-d7a75a9cd091'>
+    
+    <!-- Place script right before closing body tag -->
+    <script>
+        (function(d, id) {
+            var fcJS;
+            if (d.getElementById(id)) return;
+            fcJS = d.createElement('script');
+            fcJS.id = id;
+            fcJS.async = true;
+            fcJS.src = '//fw-cdn.com/12275722/4732003.js';
+            fcJS.setAttribute('chat', 'true');
+            fcJS.setAttribute('widgetId', '41205984-b8aa-49b1-9238-d7a75a9cd091');
+            d.body.appendChild(fcJS);
+        }(document, 'freshchat-js-sdk'));
     </script>
 </body>
 </html>
